@@ -4,7 +4,7 @@ services:
   web:
     build: .
     command: >
-      gunicorn -c gunicorn.py --reload "hello.wsgi:application"
+      gunicorn -c gunicorn.py --reload "hello.app:create_app()"
     env_file:
       - '.env'
     ports:
