@@ -1,2 +1,0 @@
-Django==1.10.6
-gunicorn==19.7
