@@ -4,6 +4,7 @@ Pratical example on how to docckerize various web applications.
 
 
 **What is Docker ?**
+
 Docker is a platform for consistently building, running, and shipping applications
 
 ## Container vs Virtual Machine
@@ -15,6 +16,7 @@ Docker is a platform for consistently building, running, and shipping applicatio
 
 
 **Docker Architecture**
+
 Docker uses client/server architecture. It has a client component that talks to the server
 using a RESTful API. The server is also called the Docker engine (or daemon) runs in
 the background and is responsible for doing the actual work
