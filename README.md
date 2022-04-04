@@ -33,3 +33,49 @@ contains all the instructions needed to package up an application into an image
 
 - We can share our images by publishing them on Docker registries. The most popular
 Docker registry is Docker Hub
+
+**Dockerfile instructions**
+
+- FROM         # to specify the base image 
+- WORKDIR      # to set the working - directory
+- COPY         # to copy files/directories
+- ADD          # to copy files/directories
+- RUN          # to run commands 
+- ENV          # to set environment variables
+- EXPOSE       # to document the port the container is listening on
+- USER         # to set the user running the app
+- CMD          # to set the default command/program
+- ENTRYPOINT   # to set the default command/program
+
+**Image commands**
+- docker build -t <name> .
+- docker images 
+- docker image ls 
+- docker run -it <image> sh
+
+**Starting and stopping containers**
+- docker stop <containerID> 
+- docker start <containerID
+
+**Removing containers**
+
+- docker container rm <containerID> 
+- docker rm <containerID> 
+- docker rm -f <containerID>   # to force the removal
+- docker container prune  # to remove stopped containers
+
+**Volumes**
+
+- docker volume ls
+- docker volume create app-data
+- docker volume inspect app-data
+- docker run -v app-data:/app/data <image>
+
+**Copying files between the host and containers**
+
+- docker cp <containerID>:/app/log.txt .
+- docker cp secret.txt <containerID>:/app
+
+**Sharing source code with containers**
+
+- docker run -v $(pwd):/app <image>
